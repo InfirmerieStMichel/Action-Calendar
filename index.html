@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendrier Aide/Soutien</title>
+    <link rel="icon" href="wave.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="decors.css">
+</head>
+<body class="wave-animation">
+
+    <div id="container">
+            <h1 class="colorTitle">Le calendrier des optimistes</h1>
+        
+        <div class="year">2024</div>
+        <div id="spaceButton">
+            
+            <div class="button">
+                <div class="monthChange" id="prevMonth">&lt; Mois précédent</div>   
+            </div>            
+
+            <div id="calendar"></div>
+            <div id="phraseContainer" class="hidden">
+                <div id="phraseContent"></div>
+            </div>
+
+            <div class="button">
+                <div class="monthChange" id="nextMonth">Mois suivant &gt;</div>
+            </div>            
+
+        </div>
+
+        <input type="button" onclick='window.location.reload(false)' value="Rafraichir la page si la phrase du jour ne vous plaît pas"/>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

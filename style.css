@@ -1,0 +1,126 @@
+#container{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: bold;
+    gap: 15px;
+}
+
+#calendar {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: center;
+}
+
+.month {
+    width: calc(100% / 7);
+    padding: 10px 0;
+    border: 3px solid #ddd; /* Bordure */
+    background-color: #e26200; /* Couleur de fond */
+    text-align: center;
+    color: #333; /* Couleur du texte */
+    transition: background-color 0.3s ease; /* Transition sur le survol */
+    position: relative; /* Position relative pour le texte lors du hover */
+    overflow: hidden; /* Masque le texte dépassant de la cellule */
+    margin: 5px;
+}
+
+.monthChange{
+    text-align: center;
+    width: 180px;
+    height: 20px;
+}
+#prevMonth,
+#nextMonth {
+    /* margin-top: 20px; */
+    cursor: pointer;
+    /* background-color: #1274c9; */
+    background-color: #f1f1f1;
+
+    color: black !important;
+    /* background-color: #4682b4;  */
+    /* Couleur de fond des boutons */
+    padding: 10px 20px; /* Espacement interne */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    outline: none; /* Pas de contour */
+    transition: background-color 0.3s ease; /* Transition sur le survol */
+}
+
+#prevMonth:hover,
+#nextMonth:hover {
+    background-color: #3e3e3e; /* Couleur de fond des boutons au survol */
+    color: white !important;
+}
+
+.year {
+    margin-top: 10px;
+    font-size: 20px; /* Taille du texte */
+    color: white;
+    padding: 2px;
+}
+
+.year:hover{
+    /* border:#9c9c9c solid 3px; */
+    background-color: aqua;
+    border: #09B9F0 solid 2px;
+    border-radius: 10px;
+    padding: 5px;
+    color: black;
+    /* color: #09B9F0; */
+}
+.button{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: auto;
+}
+
+.day {
+    cursor: pointer; /* Curseur */
+    text-align: center;
+    font-size: 15px;
+    border: solid 3px rgb(215, 215, 215);    
+    /* padding: 5px; */
+    /* width: 2.8em;
+    height: 2.8em; */
+}
+
+.day:hover {
+    background-color: #ffd500; /* Couleur de fond au survol */
+    /* -webkit-box-shadow: 10px -10px 82px -4px rgb(15, 128, 241);
+    -moz-box-shadow: 10px -10px 82px -4px rgb(11, 82, 224);
+    box-shadow: 10px -10px 82px -4px rgb(17, 78, 200); */
+}
+
+.phrases {
+    display: none;
+    position: absolute;
+    background-color: rgba(218, 215, 214, 0.9); /* Couleur de fond des phrases */
+    border: 1px solid #666; /* Bordure des phrases */
+    padding: 10px;
+    z-index: 1;
+    width: 200px; /* Largeur fixe */
+    left: calc(50% - 100px); /* Centrage horizontal */
+    top: calc(100% + 5px); /* Position sous la cellule */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Ombre */
+}
+
+.day:hover .phrases {
+    display: block;
+}
+
+#spaceButton{
+    display: flex;
+    justify-content: space-between;
+}
+
+.colorTitle{
+    color: white;
+    text-decoration: underline;
+}
+
