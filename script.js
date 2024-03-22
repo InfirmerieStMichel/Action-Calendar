@@ -30,6 +30,13 @@ const phrases = [
     "Mets à profit un de tes points forts d’une nouvelle façon",
     "Demande autour de toi ce qui leur a apporté du plaisir récemment",
     "Ecris les espoirs et les plans que tu as pour le futur",
+    "Montez le son et dansez, sautez, remuez... Bougez!",
+    "Partagez aussi souvent que possible. Cuisinez, des lectures...",
+    " Etre capable de trouver sa joie dans la joie des autres : voilà le secret du bonheur",
+    "Notez chaque jour, pendant 1 semaine, l'équivalent positif de chacune de vos pensées négatives",
+    "Osez réaliser quelque chose que vous n'avez jamais fait, juste pour voir",
+    "Certaines personnes placeront des pierres sur votre chemin. C'est à vous de décider ce que vous en ferez : un mur ou un pont",
+    
 ];
 
 const calendar = document.getElementById('calendar');
