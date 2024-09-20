@@ -1,0 +1,177 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #8ec5fc 0%, #e0c3fc 100%);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    min-height: calc(100vh - 40px); /* Le 40px est pour prendre en compte la hauteur du footer */
+}
+
+
+h1 {
+    color: #fff;
+    font-size: 2.5em;
+    margin: 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.current-date {
+    color: #f0f0f0;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.calendar-container {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 15px;
+}
+
+th {
+    background-color: rgb(9, 185, 240);
+    color: white;
+    font-size: small;
+
+}
+
+td.empty {
+    background-color: #f4f4f9;
+    cursor: default;
+}
+
+/* Style pour les jours du mois */
+td.calendar-day {
+    font-weight: bold !important;
+
+    color : white;
+    cursor: pointer;
+    background-color: rgb(226, 98, 0);
+    transition: background-color 0.3s ease;
+    font-size: large;
+}
+
+td.calendar-day:hover {
+    background-color: rgb(254, 187, 63);
+    color: white;
+}
+
+/* Popup de la phrase */
+#popupForm {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 80%;
+    max-width: 400px;
+    
+    font-size: large;
+    text-align: center;
+}
+
+#popupText {
+    margin: 0;
+}
+
+#popupForm button {
+    font-size: x-large;
+
+    display: block;
+    margin: 20px auto 0 auto;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#popupForm button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+    body {
+      font-size: 1.3em;
+    }
+    h1 {
+      font-size: 1.8em;
+    }
+    p, td, th {
+      font-size: 0.9em;
+    }
+    .current-date {
+      font-size: 1.2em;
+    }
+    #popupForm {
+      font-size: 1em;
+    }
+  }
+
+/*    wave css    */
+
+@keyframes waveEffect {
+    0% {
+    transform: translateY(0);
+    }
+    50% {
+    transform: translateY(-10px); /* Ajuste la hauteur du mouvement */
+    }
+    100% {
+    transform: translateY(0);
+    }
+}
+
+#main {
+    animation: waveEffect 3s ease-in-out infinite;
+    margin-bottom: 20vh;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    font-size: 0.9em;
+    background-color: #333;
+    color: #f1f1f1;
+    border-top: 1px solid #676767;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
